@@ -10,6 +10,10 @@ class PageController extends Controller
    public function dashboard(Request $request)
    {
 
+      dd(
+         $request->user()->friendsFrom()->get(),
+         $request->user()->friendsTo()->get()
+         );
       //dd($request->all());
       //dd($request->get('for-my'));
       //dd($request->user());
